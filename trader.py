@@ -32,7 +32,7 @@ def handle_data(context, data):
         # achieve the desired number of shares.
         order_target(context.asset, 100)
     elif short_mavg < long_mavg:
-        order_target(context.asset, -100)
+        order_target(context.asset, 0)
 
     # Save values for later inspection
     record(AAPL=data.current(context.asset, 'price'),
